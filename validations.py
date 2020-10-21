@@ -8,11 +8,14 @@ def vailidate_user(username, minlen):
     if minlen < 1:
         raise ValueError("minlen must be at least 1".)
         
+        #if length of username is less than min length
         if len(username) < minlen:
             return False
+        #if username is not alphabet or numeric
         if not username.isalnum():
             return False
         # Usernames can't begin with a number
         if username [0].isnumeric():
             return False
+        #if all the above condition fails then username is correct
         return True
